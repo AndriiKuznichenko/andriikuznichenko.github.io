@@ -1,107 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <link rel="stylesheet" href="css/main.css">
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
 
-    <script src="libs/gsap.min.js" defer></script>
-    <script src="libs/Draggable.min.js" defer></script>
-    <script src="libs/InertiaPlugin.min.js" defer></script>
-    <script src="js/app.js" defer></script>
+	<title>Showcase 3D Effect</title>
+	<meta name="description" content="Showcase 3D Effect with CSS, HTML, Swiper">
 
-    <style>
-        .gallery{opacity: 0;}
-    </style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/preview.jpg">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
 </head>
-<body>
-    <h1 class="header">Architecture <span>
-        Loading...</span></h1>
-    <div class="gallery">
-        <div class="gallery_item"><img src="img/1.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/2.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/3.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/4.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/5.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/6.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/7.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/8.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/9.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/10.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/11.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/12.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/13.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/14.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/15.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/16.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/17.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/18.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/19.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/20.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/1.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/2.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/3.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/4.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/5.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/6.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/7.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/8.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/9.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/10.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/11.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/12.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/13.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/14.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/15.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/16.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/17.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/18.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/19.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/20.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/1.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/2.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/3.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/4.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/5.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/6.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/7.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/8.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/9.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/10.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/11.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/12.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/13.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/14.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/15.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/16.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/17.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/18.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/19.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/20.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/1.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/2.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/3.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/4.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/5.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/6.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/7.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/8.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/9.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/10.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/11.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/12.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/13.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/14.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/15.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/16.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/17.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/18.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/19.jpg" alt="Alt"></div>
-        <div class="gallery_item"><img src="img/20.jpg" alt="Alt"></div>
-    </div>
 
+<body>
+
+	<section class="showcase">
+
+		<h2 class="showcase_header">Hoodie <span>Mantle</span></h2>
+
+		<div class="showcase_content-wrapper">
+			<div class="showcase_content">
+				<div class="showcase-carousel">
+				 <div class="swiper-wrapper">
+					<div class="swiper-slide showcase-carousel_item">
+						<div class="showcase-carousel__image-wrapper">
+							<div class="showcase-carousel__image-left">
+								<div class="showcase-carousel__image" style="background-image:url(images/1.png);"></div>
+							</div>
+							<div class="showcase-carousel__image-right">
+								 <div class="showcase-carousel__image" style="background-image:url(images/1.png);"></div>  
+							</div>
+						</div>
+						<p>Front</p>
+					</div>
+					<div class="swiper-slide showcase-carousel_item">
+						<div class="showcase-carousel__image-wrapper">
+							<div class="showcase-carousel__image-left">
+								<div class="showcase-carousel__image" style="background-image:url(images/2.png);"></div>
+							</div>
+							<div class="showcase-carousel__image-right">
+								 <div class="showcase-carousel__image" style="background-image:url(images/2.png);"></div> 
+							</div>
+						</div>
+						<p>Front Two</p>
+					</div>
+					<div class="swiper-slide showcase-carousel_item">
+						<div class="showcase-carousel__image-wrapper">
+							<div class="showcase-carousel__image-left">
+								<div class="showcase-carousel__image" style="background-image:url(images/3.png);"></div>
+							</div>
+							<div class="showcase-carousel__image-right">
+								 <div class="showcase-carousel__image" style="background-image:url(images/3.png);"></div> 
+							</div>
+						</div>
+						<p>Side</p>
+					</div>
+					<div class="swiper-slide showcase-carousel_item">
+						<div class="showcase-carousel__image-wrapper">
+							<div class="showcase-carousel__image-left">
+								<div class="showcase-carousel__image" style="background-image:url(images/4.png);"></div>
+							</div>
+							<div class="showcase-carousel__image-right">
+								 <div class="showcase-carousel__image" style="background-image:url(images/4.png);"></div> 
+							</div>
+						</div>
+						<p>Back</p>
+					</div>
+				 </div>
+				</div>
+				<div class="showcase-navigation">
+					<div class="showcase-navigation__prev"></div>
+					<div class="showcase-navigation__next"></div>
+				</div>
+			</div>
+		</div>
+		<video src="videos/smoke-background-optimized.mp4" class="showcase_video" autoplay loop muted></video>
+	</section>
+
+	<script src="libs/swiper/swiper-bundle.min.js"></script>
+	<script src="js/common.js"></script>
 
 </body>
+
 </html>
